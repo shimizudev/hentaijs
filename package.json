@@ -1,0 +1,56 @@
+{
+	"name": "hentaijs",
+	"version": "0.1.0",
+	"description": "A library that fetches hentai data from different sources.",
+	"module": "dist/index.js",
+	"main": "dist/index.cjs",
+	"types": "dist/index.d.ts",
+	"author": {
+		"email": "sohom829@gmail.com",
+		"name": "Mohtasim Alam Sohom"
+	},
+	"scripts": {
+		"build": "tsup",
+		"prepare": "bun run build",
+		"check": "bunx biome check --write --unsafe ."
+	},
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"require": "./dist/index.cjs",
+			"import": "./dist/index.js"
+		}
+	},
+	"files": ["dist", "README.md", "LICENSE", "tsconfig.json", "tsup.config.ts"],
+	"type": "module",
+	"devDependencies": {
+		"@types/bun": "latest",
+		"tsup": "^8.4.0"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	},
+	"dependencies": {
+		"cheerio": "^1.0.0",
+		"date-fns": "^4.1.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/shimizudev/hentaijs.git"
+	},
+	"bugs": {
+		"url": "https://github.com/shimizudev/hentaijs/issues"
+	},
+	"homepage": "https://github.com/shimizudev/hentaijs",
+	"keywords": [
+		"anime",
+		"hentai",
+		"hentaijs",
+		"hanime",
+		"rule34",
+		"r34",
+		"hentaihaven",
+		"hentai.js",
+		"rule 34"
+	]
+}

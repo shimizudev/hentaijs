@@ -1,0 +1,68 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true
+	},
+	"files": {
+		"ignoreUnknown": false,
+		"ignore": ["dist", "node_modules", "tsconfig.json", "tsup.config.ts"]
+	},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab",
+		"indentWidth": 2,
+		"lineWidth": 100,
+		"lineEnding": "lf",
+		"formatWithErrors": false
+	},
+	"organizeImports": {
+		"enabled": true
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"correctness": {
+				"noUnusedVariables": "error",
+				"noUndeclaredVariables": "error",
+				"useExhaustiveDependencies": "error"
+			},
+			"security": {
+				"noDangerouslySetInnerHtml": "error",
+				"noGlobalEval": "error"
+			},
+			"suspicious": {
+				"noConsoleLog": "warn",
+				"noExplicitAny": "error",
+				"noEmptyInterface": "error",
+				"noImplicitAnyLet": "error"
+			},
+			"style": {
+				"noNegationElse": "error",
+				"useBlockStatements": "error",
+				"useShorthandArrayType": "error",
+				"useSingleCaseStatement": "error",
+				"useTemplate": "error"
+			},
+			"complexity": {
+				"noForEach": "warn",
+				"useOptionalChain": "error"
+			}
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "double",
+			"trailingCommas": "all",
+			"semicolons": "always"
+		}
+	},
+	"json": {
+		"parser": {
+			"allowComments": false,
+			"allowTrailingCommas": false
+		}
+	}
+}
