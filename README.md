@@ -12,16 +12,16 @@ A sleek and high-performance library for fetching content from various hentai so
 ## 📦 **Installation**
 
 ```sh
-npm install hentaijs
+npm install @mohtasimalam/hentai.js
 # Or with Bun
-bun add hentaijs
+bun add @mohtasimalam/hentai.js
 ```
 
 ## 📋 **Example Usage (Rule34)**
 
 ```ts
 // Import the Rule34 provider
-import { Rule34 } from "hentaijs";
+import { Rule34 } from "@mohtasimalam/hentai.js";
 
 const r34 = new Rule34();
 
