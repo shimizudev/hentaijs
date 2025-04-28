@@ -94,7 +94,7 @@ export const HAnime = class {
 
 			let allResults: HAnimeSearchResult[] = [];
 			try {
-				const rawResults = JSON.parse(data.hits) as HAnimeRawSearchResult[];
+				const rawResults = JSON.parse(JSON.stringify(data.hits)) as HAnimeRawSearchResult[];
 				allResults = rawResults.map((result) => this.mapToSearchResult(result));
 			} catch (error) {
 				console.error("Failed to parse search results:", error);
