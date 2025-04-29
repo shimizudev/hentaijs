@@ -24,7 +24,7 @@ export const HentaiHaven = class {
 	 * @param {string} [options.baseUrl] - Custom base URL for the HentaiHaven website.
 	 */
 	constructor(options: HentaiHavenOptions) {
-		this.BASE_URL = options.baseUrl || HENTAI_HAVEN_URL;
+		this.BASE_URL = options?.baseUrl || HENTAI_HAVEN_URL;
 	}
 
 	/**
