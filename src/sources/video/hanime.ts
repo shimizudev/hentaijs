@@ -787,5 +787,3 @@ export interface HAnimeRawSearchResult {
 	created_at: number;
 	released_at: number;
 }
-
-const _hanime = new HAnime();
