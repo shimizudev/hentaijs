@@ -79,7 +79,7 @@ export const HAnime = class {
 				nbPages: number;
 				nbHits: number;
 				hitsPerPage: number;
-				hits: string;
+				hits: HAnimeRawSearchResult[];
 			};
 
 			if (!data.hits) {
@@ -94,8 +94,7 @@ export const HAnime = class {
 
 			let allResults: HAnimeSearchResult[] = [];
 			try {
-				const rawResults = JSON.parse(JSON.stringify(data.hits)) as HAnimeRawSearchResult[];
-				allResults = rawResults.map((result) => this.mapToSearchResult(result));
+				allResults = data.hits.map((result) => this.mapToSearchResult(result));
 			} catch (error) {
 				console.error("Failed to parse search results:", error);
 				throw new Error("Failed to parse search results");
@@ -245,7 +244,8 @@ export const HAnime = class {
 			dislikes: raw.dislikes,
 			downloads: raw.downloads,
 			rankMonthly: raw.monthly_rank,
-			tags: raw.tags,
+			tags:
+				typeof raw.tags === "object" && Array.isArray(raw.tags) ? raw.tags : JSON.parse(raw.tags),
 			createdAt: raw.created_at,
 			releasedAt: raw.released_at,
 		};
@@ -783,7 +783,9 @@ export interface HAnimeRawSearchResult {
 	dislikes: number;
 	downloads: number;
 	monthly_rank: number;
-	tags: string[];
+	tags: string[] | string;
 	created_at: number;
 	released_at: number;
 }
+
+const _hanime = new HAnime();

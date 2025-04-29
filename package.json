@@ -1,6 +1,6 @@
 {
 	"name": "@mohtasimalam/hentai.js",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "A library that fetches hentai data from different sources.",
 	"module": "dist/index.js",
 	"main": "dist/index.cjs",

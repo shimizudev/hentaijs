@@ -23,7 +23,7 @@ export const HentaiHaven = class {
 	 * @param {HentaiHavenOptions} options - Configuration options for the HentaiHaven client.
 	 * @param {string} [options.baseUrl] - Custom base URL for the HentaiHaven website.
 	 */
-	constructor(options: HentaiHavenOptions) {
+	constructor(options?: HentaiHavenOptions) {
 		this.BASE_URL = options?.baseUrl || HENTAI_HAVEN_URL;
 	}
 
